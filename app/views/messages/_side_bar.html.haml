@@ -1,0 +1,21 @@
+.side-bar
+  .user-name
+    .top-items
+      .top-items__name masa
+      .top-items__icon
+        = link_to "#", class: "edit-btn" do
+          = icon('fas', 'edit', class: "icon__btn")
+          %span<>
+        = link_to "#", class: "cog-btn" do
+          = icon('fas', 'cog', class: "icon__btn")
+          %span<>
+  .group-list
+    .group
+      %p.group__name techcamp
+      %p.group__message まだメッセージがありません
+    .group
+      %p.group__name techcamp
+      %p.group__message まだメッセージがありません
+    .group
+      %p.group__name techcamp
+      %p.group__message まだメッセージがありません
