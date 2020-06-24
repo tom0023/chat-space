@@ -1,0 +1,32 @@
+.main-chat
+  .group-info
+    .header__left
+      %p.group__name test
+      %p.group__member Member：masa
+    .header__right
+      = link_to "Edit", "#", class: "edit__btn"
+  .message-list
+    .message-box
+      .message-info
+        .name masa
+        .created-at 2019/11/20(wed) 17:43:01
+      %p おはよう！
+      .message-box
+      .message-info
+        .name masa
+        .created-at 2019/11/20(wed) 17:43:34
+      %p 今日は夜から雨
+      .message-box
+      .message-info
+        .name masa
+        .created-at 2019/11/20(wed) 17:43:01
+      %p おはよう！
+  .message-form
+    .input-area
+      %input.inputText{"placeholder": "type a message", "type": "text"}
+      %label{class: "input-box__image"}
+        = icon('far', 'image')
+        %input{type: "file"}
+    %input.submitBtn{"name": "commit", "type": "submit", "value": "Send"}
+
+
