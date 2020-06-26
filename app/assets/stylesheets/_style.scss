@@ -119,6 +119,9 @@
           color: #434a54;
           font-size: 14px;
         }
+        .Message__image {
+          height: 300px;
+        }
       }
     }
     .message-form {
@@ -147,7 +150,7 @@
         label {
           position: absolute;
           right: 10px;
-          input {
+          .Hidden {
             display: none;
           }
         }

@@ -6,27 +6,25 @@
     .header__right
       = link_to "Edit", "#", class: "edit__btn"
   .message-list
-    .message-box
-      .message-info
-        .name masa
-        .created-at 2019/11/20(wed) 17:43:01
-      %p おはよう！
+    - @messages.each do |message|
       .message-box
-      .message-info
-        .name masa
-        .created-at 2019/11/20(wed) 17:43:34
-      %p 今日は夜から雨
-      .message-box
-      .message-info
-        .name masa
-        .created-at 2019/11/20(wed) 17:43:01
-      %p おはよう！
-  .message-form
-    .input-area
-      %input.inputText{"placeholder": "type a message", "type": "text"}
-      %label{class: "input-box__image"}
-        = icon('far', 'image')
-        %input{type: "file"}
-    %input.submitBtn{"name": "commit", "type": "submit", "value": "Send"}
+        .message-info
+          .name
+            = message.user.name
+          .created-at
+            = message.created_at.strftime("%Y年%m月%d日  %H時%M分")
+        - if message.content.present?
+          %p
+            = message.content
+        = image_tag message.image, class: 'Message__image' if message.image.present?
+
+  = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|    
+    .message-form
+      .input-area
+        = f.text_field :content, class: 'inputText', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'submitBtn'
 
 
