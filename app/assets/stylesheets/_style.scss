@@ -72,9 +72,10 @@
             color: #333333;
             font-size: 20px;
           }
-          &__member {
+          &__members {
             color: #999999;
             font-size: 12px;
+            display: flex;
           }
         }
       }
@@ -119,7 +120,7 @@
           color: #434a54;
           font-size: 14px;
         }
-        .Message__image {
+        .message__image {
           height: 300px;
         }
       }
