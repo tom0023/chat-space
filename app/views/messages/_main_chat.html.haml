@@ -9,19 +9,7 @@
             = user.name
     .header__right
       = link_to "Edit", edit_group_path(@group.id), class: "edit__btn"
-  .message-list
-    - @messages.each do |message|
-      .message-box
-        .message-info
-          .name
-            = message.user.name
-          .created-at
-            = message.created_at.strftime("%Y年%m月%d日  %H時%M分")
-        - if message.content.present?
-          %p
-            = message.content
-        = image_tag message.image.url, class: 'message__image' if message.image.present?
-
+  = render "message"
   = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|    
     .message-form
       .input-area
