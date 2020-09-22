@@ -1,3 +1,8 @@
+
+# **Chat-space**
+グループチャットアプリです。<br>
+グループ作成後、メッセージor画像投稿が可能です。<br><br>
+
 <img src="https://i.gyazo.com/dffaba078a77b3f6208417e0e984a13c.jpg" width="100%"><br><br>
 
 本番環境：http://13.114.114.187<br><br>
@@ -6,9 +11,6 @@
 EMAIL：gest@com<br>
 PASS：gest1111<br><br>
 
-# **Chat-space**
-グループチャットアプリです。<br>
-グループ作成後、メッセージor画像投稿が可能です。<br><br>
 
 ## 実装機能
 ・グループ内メッセージチャット機能<br>
